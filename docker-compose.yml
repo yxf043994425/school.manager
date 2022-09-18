@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+  school_manager:
+    container_name: school_manager
+    # image: python
+    build:
+      context: .
+      dockerfile: ./docker/Dockerfile
+    restart: always
+    volumes:
+      - ./:/app/
+    tty: true
